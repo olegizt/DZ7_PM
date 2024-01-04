@@ -18,7 +18,7 @@ createrepo /usr/share/nginx/html/repo/
 
 echo '#!/bin/bash' >> /usr/local/sbin/motd.sh
 chmod +x /usr/local/sbin/motd.sh
-echo 'printf "\e[0;37;42mПривет! Проверка настроек ДЗ №7 - \"Управление пакетами. Дистрибьюция софта\" на сервере.\e[0m\n\e[0;37;42mРепозиторий на этой ВМ настроен и запущен.\e[0m\n\e[0;37;42mДля проверки подключитесь к ВМ-клиенту командой\e[0;31;48m vagrant ssh pmclt \e[0m\e[0;37;42mи следуйте указаниям MOTD.\e[0m\n"' >> /usr/local/sbin/motd.sh
+echo 'printf "\e[0;37;42mПривет! Проверка настроек ДЗ №7 - \"Управление пакетами. Дистрибьюция софта\" на сервере.\e[0m\n\e[0;37;42mРепозиторий на этой ВМ настроен и запущен.\e[0m\n\e[0;37;42mДля проверки подключитесь к ВМ-клиенту и следуйте указаниям MOTD.\e[0m\n"' >> /usr/local/sbin/motd.sh
 echo "PrintMotd no" >> /etc/ssh/sshd_config
 systemctl restart sshd
 echo '/usr/local/sbin/motd.sh' >> /etc/profile
