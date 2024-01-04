@@ -1,4 +1,7 @@
 systemctl enable firewalld --now
+yum install -y wget
+wget -P /home/vagrant/ https://raw.githubusercontent.com/olegizt/DZ7_PM/main/c_check.sh
+chmod +x /home/vagrant/c_check.sh
 
 
 echo '#!/bin/bash' >> /usr/local/sbin/motd.sh
